@@ -23,7 +23,7 @@
 ;  :recipe (:host github :repo "username/repo"
 ;           :files ("some-file.el" "src/lisp/*.el")))
 (package! jinja2-mode
-  :recipe (:host gitgub :repo "paradoxxxzero/jinja2-mode"
+  :recipe (:host github :repo "paradoxxxzero/jinja2-mode"
            :files ("jinja2-mode.el")))
 
 ;; If you'd like to disable a package included with Doom, you can do so here
