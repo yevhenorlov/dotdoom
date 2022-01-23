@@ -33,9 +33,16 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/code/org/")
+
 ;; `org-roam' config
 (setq org-roam-directory "~/code/org-roam")
 (org-roam-db-autosync-mode)
+(map! :leader
+      (:prefix-map ("r" . "roam")
+        :desc "toggle buffer" "b" #'org-roam-buffer-toggle
+       (:prefix ("n" . "node")
+        :desc "find" "f" #'org-roam-node-find
+        :desc "insert" "i" #'org-roam-node-insert)))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
